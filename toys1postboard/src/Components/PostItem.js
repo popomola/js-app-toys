@@ -6,13 +6,13 @@ import React from 'react';
 const PostItem = ({writer, date, title, body})=>{
     return(
         <>
-            <div className="postItem">
+            <span className="postItem">
                 <span>{title + " **"}</span><span>{writer +" " + date}</span>
                 <div>
                     <span>{body}</span>
                 </div>
                 <br/>
-            </div>
+            </span>
         </>
     )
 }
