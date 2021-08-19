@@ -1,6 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,Switch,Route, Link} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route, Link} from "react-router-dom";
 
 import PostBoard from './Components/PostBoard.js';
 import Profile from './Components/Profile.js';
@@ -23,18 +22,23 @@ function App() {
         <Link className="register-margin" to="/register">회원가입</Link>
       </div>
           <Switch>
-          <Route exact path="/">
-            <PostBoard/>
-          </Route>
-          <Route path="/profile">
-            <Profile/>
-          </Route>
-          <Route path="/login">
-            <LogIn/>
-          </Route>
-          <Route path="/register">
-            <Register/>
-          </Route>
+
+            <Route exact path="/">
+              <PostBoard/>
+            </Route>
+
+            <Route path="/profile">
+              <Profile/>
+            </Route>
+
+            <Route path="/login">
+              <LogIn/>
+            </Route>
+
+            <Route path="/register">
+              <Register/>
+            </Route>
+            
           </Switch>
       </Router>
     </div>
