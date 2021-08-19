@@ -21,6 +21,8 @@ const userDB2 = [
     },
     
 ]
-이렇게 리스트가 있고, 이 리스트를 <PostList> 컴포넌트가 받고, 그 안에 있는 <PostItem>이 props으로서 받은 리스트에 접근한다고 했을 때, 단순히 userDB[0]이런 식으로만 접근이 가능한가?
+이렇게 리스트가 있고, 이 리스트를 PostList 컴포넌트가 받고, 그 안에 있는 PostItem 컴포넌트가 props으로서 받은 리스트에 접근한다고 했을 때, 단순히 userDB[0]이런 식으로만 접근이 가능한가?
 
-!
+! React-Router를 통해 url변경 시 원하는 컴포넌트만 화면에 나타날 수 있도록 하는 기능도 있다.
+! Switch는 원하는 것만 화면에 띄워주는데, '/'얘가 path인 경우에는 exact를 path앞에 써준다.
+! Router의 Switch를 쓰면 url에 좀 민감해진다. url에 해당하지 않는 컴포넌트는 화면에 안 나옴
