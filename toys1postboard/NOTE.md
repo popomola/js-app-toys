@@ -26,3 +26,6 @@ const userDB2 = [
 ! React-Router를 통해 url변경 시 원하는 컴포넌트만 화면에 나타날 수 있도록 하는 기능도 있다.
 ! Switch는 원하는 것만 화면에 띄워주는데, '/'얘가 path인 경우에는 exact를 path앞에 써준다.
 ! Router의 Switch를 쓰면 url에 좀 민감해진다. url에 해당하지 않는 컴포넌트는 화면에 안 나옴
+! Router가 굉장히 편한 것 같다. a태그를 쓰지 않더라도 Link나 Route를 통해 원하는 페이지를 띄울 수 있으니까.
+
+# 2일차
