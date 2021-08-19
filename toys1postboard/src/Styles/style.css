@@ -1,0 +1,18 @@
+.top-bar{
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 100px;
+    width: 1000px;
+}
+
+.community-title{
+    font-size: 100px;
+}
+
+.login-margin{
+    margin-left: 250px;
+}
+
+.register-margin{
+    margin-left: 8px
+}
