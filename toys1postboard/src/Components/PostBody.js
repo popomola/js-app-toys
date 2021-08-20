@@ -2,17 +2,12 @@ import React from 'react';
 
 import Post from './Post'
 
-const bodyDB1 = [
- 
-"제가 주식을 시작했는데... 벼락부자가 되었습니다.",
 
-] 
-
-const PostBody = ({writerInfo})=>{
+const PostBody = ({writerInfo, bodyDB})=>{
     return(
         <>
             <div>
-                <Post writerInfo={writerInfo} body={bodyDB1} />
+                <Post writerInfo={writerInfo} body={bodyDB} />
             </div>
         </>
     )
