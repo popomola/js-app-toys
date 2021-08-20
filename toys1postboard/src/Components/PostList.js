@@ -14,35 +14,33 @@ const PostList = ({postListTitle, userDB})=>{
             <div className="postList">
                 <p>{postListTitle}</p>
                 
-                <Router>
-                    <Link to={`/postbody${userDB[0].writer}`}>
-                    <PostItem 
-                    writer={userDB[0].writer} 
-                    date={userDB[0].date} 
-                    title={userDB[0].title} 
-                    body={userDB[0].body} />
-                    </Link>
-                    
-                    <Link to={`/postbody${userDB[1].writer}`}>
-                    <PostItem 
-                    writer={userDB[1].writer} 
-                    date={userDB[1].date} 
-                    title={userDB[1].title} 
-                    body={userDB[1].body} />
-                    </Link>
+                <Link to={`/postbody${userDB[0].writer}`}>
+                <PostItem 
+                writer={userDB[0].writer} 
+                date={userDB[0].date} 
+                title={userDB[0].title} 
+                body={userDB[0].body} />
+                </Link>
+                
+                <Link to={`/postbody${userDB[1].writer}`}>
+                <PostItem 
+                writer={userDB[1].writer} 
+                date={userDB[1].date} 
+                title={userDB[1].title} 
+                body={userDB[1].body} />
+                </Link>
 
-                    <Switch>
+                <Switch>
 
-                        <Route path={`/postbody${userDB[0].writer}`}>
-                            <PostBody writerInfo={userDB[0].writer}/>
-                        </Route>
+                    <Route path={`/postbody${userDB[0].writer}`}>
+                        <PostBoard writerInfo={userDB[0].writer}/>
+                    </Route>
 
-                        <Route path={`/postbody${userDB[1].writer}`}>
-                            <PostBody writerInfo={userDB[1].writer}/>
-                        </Route>
+                    <Route path={`/postbody${userDB[1].writer}`}>
+                        <PostBoard writerInfo={userDB[1].writer}/>
+                    </Route>
 
-                    </Switch>
-                </Router>
+                </Switch>
             </div>
         </>
     )
