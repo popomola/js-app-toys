@@ -2,6 +2,8 @@ import React from 'react';
 import Modal from 'react-modal';
 import {useState} from 'react';
 
+import Comment from './Comment';
+
 const Post = ({writerInfo, body})=>{
     const [modalIsOpen, setIsOpen] = useState(true);
     return(
@@ -11,6 +13,7 @@ const Post = ({writerInfo, body})=>{
             <p>{writerInfo}</p>
             <p>{body}</p>
             <button onClick={()=>{setIsOpen(false)}}>닫기</button>
+            <Comment />
             </Modal>
         </>
     )
