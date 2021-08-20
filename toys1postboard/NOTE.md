@@ -32,3 +32,15 @@ const userDB2 = [
 ! 데이터 표시 방법에 대해서 많이 좀 헷갈린다...
 
 # 2일차
+! 컴포넌트 간 데이터 전송 방식에 대해 헷갈린다. 구글링 해도 별로 없다.
+! 컴포넌트를 어떤식으로 구성해야 하는지, 어떻게 쪼개야 하는지 좀 헷갈린다.
+! React에서는 Modal 컴포넌트를 사용하는 게 쉽다. 그냥 npm install --save react-modal하고, Modal 컴포넌트를 사용하고 싶은 파일에서 import Modal from 'react-modal'하고, isOpen에 bool값을 주면서 열었다 닫았다 하면 된다.
+! React에서 JSX안에서 조건문을 쓰고 싶다면, ternary operator말고는 답이 없는 거 같다. 조건에 맞춰 원하는 컴포넌트들을 리턴할 수 있다. 단, ternary operator를 쓰려면 javascript이기 때문에 
+return(
+    <>
+        {a? b : c}
+    </>
+) 
+이렇게 안에다가 해야 한다.
+
+!
