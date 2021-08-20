@@ -10,9 +10,11 @@ const bodyDB1 = [
 
 const PostBody = ({writerInfo})=>{
     return(
-        <div>
-            <Post writerInfo={writerInfo} body={bodyDB1}/>
-        </div>
+        <>
+            <div>
+                <Post writerInfo={writerInfo} body={bodyDB1} />
+            </div>
+        </>
     )
 }
   
