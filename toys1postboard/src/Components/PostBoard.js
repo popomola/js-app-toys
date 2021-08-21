@@ -9,5 +9,4 @@ const PostBoard = ({userDB})=>{
         </div>
     )
 }
-  
 export default PostBoard;
