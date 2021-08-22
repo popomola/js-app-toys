@@ -66,4 +66,5 @@ Post파일에서 WritePost컴포넌트를 쓴다고 했을 때, WritePost의 데
 ! Redux에서 reducer는 현재의 state와 action를 매개변수로 받는 함수다. 그리고 action의 type에 따라서 어떻게 state를 업데이트 할 것인지 결정한다. 필요하다면 새로운 state를 return한다. if문이나 switch를 통해 원하는 state값을 return 할 수 있다.
 ! Redux에서 Store는 state를 저장하고 있는 object다.
 ! Redux에서 Dispatch는 store에 저장되어 있는 state를 변경할 수 있는 유일한 방법이다. action을 pass in 하여 state를 변경한다. action을 dispatch한다는 것은 triggering an event와 같은 의미다.
-! 
+! React에서 Lifting state up한다는 것은 컴포넌트들이 사용되는 공통된 상위 컴포넌트(ancestor)에서 state를 조절하는 것을 말한다. 즉, 상위 컴포넌트로 state를 lift up한다는 것.
+
