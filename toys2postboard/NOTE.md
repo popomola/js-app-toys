@@ -68,3 +68,18 @@ Post파일에서 WritePost컴포넌트를 쓴다고 했을 때, WritePost의 데
 ! Redux에서 Dispatch는 store에 저장되어 있는 state를 변경할 수 있는 유일한 방법이다. action을 pass in 하여 state를 변경한다. action을 dispatch한다는 것은 triggering an event와 같은 의미다.
 ! React에서 Lifting state up한다는 것은 컴포넌트들이 사용되는 공통된 상위 컴포넌트(ancestor)에서 state를 조절하는 것을 말한다. 즉, 상위 컴포넌트로 state를 lift up한다는 것.
 
+# 5일차
+! https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers 이 링크로 가면 redux와 react가 준비된 template을 받아 사용할 수 있다. 만약 reducer헷갈리면 방문해서 읽어라.
+! Redux와 React에서 중요한 것은 UI가 state에 기반해야 한다는 것이다.
+! Redux에서 reducer는 불가침원칙이 3개 있는데 그 중 하나는 이미 존재하는 state의 원본을 바꿀 수 없고, 해당 state를 복사하여 값을 업데이트 해야 한다는 점이다.
+! Redux의 reducer 함수가 직접 값이 변화하는 state를 다루지 않고 복사하는 이유는, 함수에서 함수 외부의 변수(값) 혹은 매개변수를 조정하거나 건들이면 application이 꼬일 수 있기 때문이다.
+! 즉, 되도록이면 하나의 함수는 외부의 변수 혹은 입력받는 매개변수를 변화시키지 말아야 한다.
+! 때문에 따로 state의 복사본을 만들 수 있는 방법을 알고 있어야 한다... 나는 아직 모르겠다.
+! 한편 state가 nested되어 있는 경우에는 모든 level마다 값들을 다 바꿔야 한다.
+! Redux에서는 reducer를 저장하기 위해 해당 reducer가 수행하는 기능(feature)별로 폴더와 파일을 쪼개서 저장한다. feature상위 폴더에 각각의 기능을 갖는 reducer하위폴더들을 만드는 것.
+! 이때 각각의 하위폴더들의 이름은 action의 tpye을 나타내고, 하위폴더 내의 파일들은 action의 내용을 설명할 수 있는 제목으로 만든다. 또한 slice라는 이름을 붙여 기능이 간소화된 reducer임을 표현한다.
+! 한편 Redux store는 하나의 root reducer만 필요하다. 때문에 파일들을 다 쪼개면, 하나의 reducer파일에다가 각각의 slice(기능이 최소단위로 쪼개진 reducer파일)들을 임포트 해서 reducer의 형태로 return한다. 자세한 건 검색해라. 헷갈리면. 검색어는 combine reducer로. 
+! 어쩄든 쪼갠(slice된 reducer들) 애들을 하나의 파일에다가 불러오면 각각의 reducerslice들은 각각이 맡은 global state를 관장한다. 
+! 기본적으로 React관련 된 애들은 기능 별로 작은 단위로 쪼개는 것을 좋아하는 것 같다. 때문에 처음 앱을 디자인 할 때 기능 별로 쪼갤 수 있는 건 쪼개서 분류를 하고 기능을 구별하는 게 중요한듯.
+! 그런데 이 귀찮은 것들을 쉽게 만들어주는 녀석이 있다. terminal에서 npm install redux를 하고, root reducer 파일에서 combineReducers를 import하면 된다. 자세한 건 검색 ㄱ
+! 
