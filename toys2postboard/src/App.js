@@ -1,37 +1,28 @@
 import React, {useState} from 'react';
 import { Button }  from '@material-ui/core';
 import Modal from 'react-modal';
+import { Container } from '@material-ui/core';
 
-import PostBody from './PostBody';
-
-const textDB = [
-
-  '고민이 생겼어요. 저는 사실 바보입니다...',
-  '고민이 생겼어요. 저는 사실 주식을 사랑합니다...',
-]
+import Body from './Body.js';
 
 function App() {
-  const [IsOpen, setIsOpen] = useState(false)
+  return(
+    <>
+     {/* 
+          대화가 이뤄지는 공간
+          말풍선(상대, 내 꺼. 색만 다르게.)
+          메시지 입력 공간
+          전송버튼
 
-  return (
-    <div>
-      
-      <Modal isOpen={IsOpen} ariaHideApp={false}>
-        <Button onClick={() => {setIsOpen(false)}} color='secondary'>
-          창닫기
-        </Button>   
-      </Modal>
 
-      <>
-        <Button onClick={() => {setIsOpen(true)}} color='primary'>
-          <PostBody maintext={textDB[0]}/>
-        </Button>
-        <Button onClick={() => {setIsOpen(true)}} color='primary'>
-          <PostBody maintext={textDB[1]}/>
-        </Button>
-      </>
-
-    </div>
+          서버에 있는 온라인 상태의 아무나를 매칭시켜준다.
+            온라인 상태를 어떻게 구현할 것인가?
+     */}
+      {/* 컨테이너는 레이아웃 */}
+      <Container maxWidth="sm">
+        <Body />
+      </Container>
+    </>
   );
 }
 
