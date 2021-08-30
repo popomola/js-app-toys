@@ -5,6 +5,8 @@ import MessageInput from './MessageInput';
 
 function Body() {
 
+    const [message, setMessage] = useState("");
+
     const messageLayout = {
         color: "white",
         backgroundColor: "DodgerBlue",
@@ -19,14 +21,18 @@ function Body() {
         marginLeft: "50px",
     }
 
+    const submitText = ()=>{
+
+    }
+
     return(
       <>
        {/* 
             메시지 입력창, 전송버튼, 대화내용 컴포넌트가 들어와야
        */}
        <div style={messageLayout}>
-            <MessageInput/>
-            <Button style={buttonMargin} variant="contained" color="primary">전송</Button>
+            <MessageInput message={message}/>
+            <Button onClick={submitText} style={buttonMargin} variant="contained" color="primary">전송</Button>
        </div>
       </>
     );
