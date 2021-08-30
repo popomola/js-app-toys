@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function MessageInput() {
+function MessageInput({message}) {
     return(
       <>
        {/* 
@@ -9,9 +9,7 @@ function MessageInput() {
        */}
        <div>
            <div>
-               <textarea>
-                    
-               </textarea>
+               <textarea value/>
            </div>
        </div>
       </>
